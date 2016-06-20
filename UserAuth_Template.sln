@@ -18,6 +18,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAuth_Template.Managers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAuth_Template.Data", "src\UserAuth_Template.Data\UserAuth_Template.Data.csproj", "{7350C789-CBC6-413D-A943-C67DE34A9C0B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "temp", "temp", "{FA56D446-F6AB-40AA-A0D2-C5E9E8CB26D7}"
+	ProjectSection(SolutionItems) = preProject
+		tasks.txt = tasks.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
