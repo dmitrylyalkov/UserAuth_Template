@@ -1,6 +1,7 @@
 DI
 EF
 Bower
+NPM
 Gulp
 Grunt
 Google_auth
@@ -9,3 +10,7 @@ Less
 TagHelpers
 Angular
 Cors
+Logs 
+ErrorHandling
+ConfigVariables
+Application Insights

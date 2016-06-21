@@ -13,11 +13,11 @@ namespace UserAuth_Template_AspNetCore.Web
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
-                //.UseContentRoot(Directory.GetCurrentDirectory())
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
-
+            
             host.Run();
         }
     }
