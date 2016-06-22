@@ -14,3 +14,4 @@ Logs
 ErrorHandling
 ConfigVariables
 Application Insights
+UserSecrets

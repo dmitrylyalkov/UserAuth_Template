@@ -1,4 +1,13 @@
-﻿
-<h>Test</h>
-<span>Next page</span>
+﻿@using System.Collections.Generic
+@using UserAuth_Template.Model.Entities
+
+@model UsersViewModel
+
+<h>users</h>
+
+@foreach (var user in Model.Users)
+{
+    <div>@($"{user.ID} - {user.Name} - {user.Email}")</div>
+}
+
 
