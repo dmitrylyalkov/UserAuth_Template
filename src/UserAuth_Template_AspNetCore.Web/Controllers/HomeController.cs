@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UserAuth_Template.Managers;
+using UserAuth_Template.ManagersCore.Managers;
 using UserAuth_Template_AspNetCore.Web.ViewModels;
 
 namespace UserAuth_Template_AspNetCore.Web.Controllers

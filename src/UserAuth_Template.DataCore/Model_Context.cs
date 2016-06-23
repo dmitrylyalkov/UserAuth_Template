@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using UserAuth_Template.Model.Entities;
 
-namespace UserAuth_Template.Data
+namespace UserAuth_Template.DataCore
 {
     public class Model_Context : DbContext
     {

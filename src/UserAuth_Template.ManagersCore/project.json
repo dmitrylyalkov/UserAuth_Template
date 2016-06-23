@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "UserAuth_Template.DataCore": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net461": {
+      "dependencies": {
+        "UserAuth_Template.Model": {
+          "target": "project"
+        }
+      }
+    }
+  }
+}

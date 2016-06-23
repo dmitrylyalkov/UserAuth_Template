@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using UserAuth_Template.Data;
+using UserAuth_Template.DataCore;
 using UserAuth_Template.Model.Entities;
 
-namespace UserAuth_Template.Managers
+namespace UserAuth_Template.ManagersCore.Managers
 {
     public interface IUserManager
     {

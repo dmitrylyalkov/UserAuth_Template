@@ -1,0 +1,17 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "EntityFramework": "6.1.3"
+  },
+
+  "frameworks": {
+    "net461": {
+      "dependencies": {
+        "UserAuth_Template.Model": {
+          "target": "project"
+        }
+      }
+    }
+  }
+}
