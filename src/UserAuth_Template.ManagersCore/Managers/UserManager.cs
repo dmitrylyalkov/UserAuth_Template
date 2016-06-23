@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UserAuth_Template.DataCore;
-using UserAuth_Template.Model.Entities;
+using UserAuth_Template.ModelCore.Entities;
 
 namespace UserAuth_Template.ManagersCore.Managers
 {

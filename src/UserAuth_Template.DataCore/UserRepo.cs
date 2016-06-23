@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using UserAuth_Template.Model.Entities;
+using UserAuth_Template.ModelCore.Entities;
 
 namespace UserAuth_Template.DataCore
 {

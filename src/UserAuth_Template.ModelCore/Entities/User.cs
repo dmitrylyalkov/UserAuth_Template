@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace UserAuth_Template.Model.Entities
+namespace UserAuth_Template.ModelCore.Entities
 {
     [Table("Users")]
     public class User

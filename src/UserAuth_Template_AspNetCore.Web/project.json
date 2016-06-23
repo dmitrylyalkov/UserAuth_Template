@@ -19,10 +19,7 @@
   "frameworks": {
     "net461": {
       "dependencies": {
-        "UserAuth_Template.Managers": {
-          "target": "project"
-        },
-        "UserAuth_Template.Model": {
+        "UserAuth_Template.ModelCore": {
           "target": "project"
         }
       }
