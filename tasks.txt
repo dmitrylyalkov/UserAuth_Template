@@ -12,6 +12,5 @@ Angular
 Cors
 Logs 
 ErrorHandling
-ConfigVariables
 Application Insights
 UserSecrets

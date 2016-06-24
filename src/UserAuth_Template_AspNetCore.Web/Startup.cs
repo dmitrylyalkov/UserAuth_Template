@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.CodeAnalysis;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using UserAuth_Template.ModelCore.Entities;
 
@@ -8,21 +9,22 @@ namespace UserAuth_Template_AspNetCore.Web
 {
     public class Startup
     {
-        //public IConfiguration AppConfiguration { get; set; }
+        public IConfiguration AppConfiguration { get; set; }
 
         public Startup(IHostingEnvironment env)
         {
-            //var builder = new ConfigurationBuilder()
-            //    .SetBasePath(env.ContentRootPath)
-            //    .AddJsonFile("appsettings.json");
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json");
 
-            //AppConfiguration = builder.Build();
+            AppConfiguration = builder.Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddOptions();
-            //services.Configure<Options>(AppConfiguration.GetSection("Data"));
+            services.AddOptions();
+            services.Configure<ConnectionOptions>(AppConfiguration.GetSection("Connection"));
+            services.Configure<DataOptions>(AppConfiguration.GetSection("Data"));
 
             services.AddMvc()
                 //Microsoft bug

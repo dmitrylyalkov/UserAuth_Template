@@ -13,9 +13,9 @@ namespace UserAuth_Template.DataCore
     {
         Model_Context _context;
 
-        public UserRepo()
+        public UserRepo(string connection = null)
         {
-            _context = new Model_Context();
+            _context = new Model_Context(connection);
         }
 
         public IList<User> GetUsers(int count = 0)

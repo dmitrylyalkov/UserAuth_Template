@@ -1,9 +1,13 @@
 ﻿@using System.Collections.Generic
-@using UserAuth_Template.Model.Entities
+@using Microsoft.Extensions.Options
+@using UserAuth_Template.ModelCore.Entities
+@using UserAuth_Template_AspNetCore.Web
+
+@inject IOptions<DataOptions> dataOptions
 
 @model UsersViewModel
 
-<h>users</h>
+<h>users @($"show {dataOptions.Value.UserCount}")</h>
 
 @foreach (var user in Model.Users)
 {
