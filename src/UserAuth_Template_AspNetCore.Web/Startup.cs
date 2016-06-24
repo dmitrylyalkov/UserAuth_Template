@@ -39,7 +39,16 @@ namespace UserAuth_Template_AspNetCore.Web
                 });
         }
 
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /*ASP.NET 5 предоставляет следующие встроенные компоненты middleware:
+            Authentication: предоставляет поддержку аутентификации
+            CORS: обеспечивает поддержку кроссдоменных запросов
+            Diagnostics: предоставляет страницы ошибок и некоторую информацию выполнения запроса
+            Routing: определяет маршруты, используемые в приложении
+            Session: предоставляет поддержку сессий
+            Static Files: предоставляет поддержку обработки статических файлов
+         */
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
