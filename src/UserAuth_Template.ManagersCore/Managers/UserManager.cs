@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using UserAuth_Template.DataCore;
 using UserAuth_Template.ModelCore.Entities;
@@ -14,9 +15,9 @@ namespace UserAuth_Template.ManagersCore.Managers
     {
         IUserRepo _userRepo;
         
-        public UserManager(String connection = null)
+        public UserManager(IUserRepo userRepo)
         {
-            _userRepo = new UserRepo(connection);
+            _userRepo = userRepo;
         }
 
         public IList<User> GetUsers(int count = 0)

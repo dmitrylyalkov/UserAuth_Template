@@ -1,5 +1,5 @@
-DI
-EF
+DI(done)
+EF(done)
 Bower
 NPM
 Gulp

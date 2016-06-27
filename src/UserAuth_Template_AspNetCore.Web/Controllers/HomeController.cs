@@ -7,14 +7,14 @@ namespace UserAuth_Template_AspNetCore.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IOptions<ConnectionOptions> _connectionOptions;
         private readonly IOptions<DataOptions> _dataOptions;
 
+        private IUserManager _userManager;
 
-        public HomeController(IOptions<ConnectionOptions> connectionOptions, IOptions<DataOptions> dataOptions)
+        public HomeController(IOptions<DataOptions> dataOptions, IUserManager userManager)
         {
-            _connectionOptions = connectionOptions;
             _dataOptions = dataOptions;
+            _userManager = userManager;
         }
                 
 
@@ -25,9 +25,7 @@ namespace UserAuth_Template_AspNetCore.Web.Controllers
 
         public IActionResult Test()
         {
-            var connection = _connectionOptions.Value.ConnectionString;
-            var manager = new UserManager(connection);
-            var users = manager.GetUsers(_dataOptions.Value.UserCount);
+            var users = _userManager.GetUsers(_dataOptions.Value.UserCount);
 
             return View("Test", new UsersViewModel { Users = users });
         }

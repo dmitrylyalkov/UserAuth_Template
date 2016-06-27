@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final",
+    "UserAuth_Template.DataCore": "1.0.0-*",
+    "UserAuth_Template.ManagersCore": "1.0.0-*",
+    "UserAuth_Template.ModelCore": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net461": { }
+    }
+  }

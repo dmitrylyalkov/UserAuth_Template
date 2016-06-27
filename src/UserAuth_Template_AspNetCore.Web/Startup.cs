@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using UserAuth_Template.DICore;
 using UserAuth_Template.ModelCore.Entities;
 
 namespace UserAuth_Template_AspNetCore.Web
@@ -23,8 +24,10 @@ namespace UserAuth_Template_AspNetCore.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOptions();
-            services.Configure<ConnectionOptions>(AppConfiguration.GetSection("Connection"));
+            //services.Configure<ConnectionOptions>(AppConfiguration.GetSection("Connection"));
             services.Configure<DataOptions>(AppConfiguration.GetSection("Data"));
+
+            services.ConfigureDI(AppConfiguration.GetValue<string>("Connection:ConnectionString"));
 
             services.AddMvc()
                 //Microsoft bug
