@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,19 +58,21 @@ namespace UserAuth_Template_AspNetCore.Web
             app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
+            app.UseMvc(ConfigureRoutes);            
+        }
+
+        private void ConfigureRoutes(IRouteBuilder routes)
+        {
+            routes.MapRoute(
                     name: "Index",
                     template: "",
                     defaults: new { controller = "Home", action = "Index" }
                 );
-                routes.MapRoute(
-                    name: "Next",
-                    template: "Test",
-                    defaults: new { controller = "Home", action = "Test" }
-                );
-            });            
+            routes.MapRoute(
+                name: "Next",
+                template: "Test",
+                defaults: new { controller = "Home", action = "Test" }
+            );
         }        
     }
 }
