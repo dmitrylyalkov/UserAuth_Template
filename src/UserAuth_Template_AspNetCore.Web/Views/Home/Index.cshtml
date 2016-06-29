@@ -11,12 +11,12 @@
 <div ng-app="mApp">
     <div ng-controller="testController">
         <span>load items</span>
-        <input type="text" ng-model="testParams.count"/><span>{{testParams.count}}</span> <button>get</button>
+        <input type="text" ng-model="testParams.count"/><span>{{testParams.count}}</span> <button ng-click="updateItems()">get</button>
     
         <div>
             <ul>
                 <li ng-repeat="item in items">
-                    <span>name: {{item.name}} email: {{item.email}}</span>
+                    <span>name: {{item.Name}} email: {{item.Email}}</span>
                 </li>
             </ul>
         </div>

@@ -29,5 +29,13 @@ namespace UserAuth_Template_AspNetCore.Web.Controllers
 
             return View("Test", new UsersViewModel { Users = users });
         }
+
+        public IActionResult GetItems(int count)
+        {
+            var users = _userManager.GetUsers(count);
+
+            var result = Json(users);
+            return result;
+        }
     }
 }

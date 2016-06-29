@@ -73,6 +73,11 @@ namespace UserAuth_Template_AspNetCore.Web
                 template: "Test",
                 defaults: new { controller = "Home", action = "Test" }
             );
+            routes.MapRoute(
+                name: "GetItems",
+                template: "GetItems",
+                defaults: new { controller = "Home", action = "GetItems" }
+            );            
         }        
     }
 }
