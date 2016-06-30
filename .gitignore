@@ -4,3 +4,5 @@ obj/
 *.user
 *.lock.json
 packages/
+node_modules/
+lib/
